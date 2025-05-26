@@ -1,0 +1,37 @@
+volatility-surface-project/
+├── data/
+│   ├── raw/                     # Raw input data files (e.g., options prices, market data)
+│   │   └── options_2025-05.csv
+│   ├── processed/               # Cleaned and transformed data files
+│   └── external/                # Any external datasets (e.g., interest rates)
+│
+├── notebooks/                   # Jupyter notebooks for exploration & prototyping
+│   ├── 01-data-cleaning.ipynb
+│   ├── 02-vol-surface-exploration.ipynb
+│   └── 03-model-fitting.ipynb
+│
+├── src/                        # Source code
+│   ├── data/                   # Scripts for data loading & preprocessing
+│   │   └── load_data.py
+│   ├── models/                 # Volatility surface modeling code (e.g., SABR, SVI)
+│   │   ├── sabr.py
+│   │   └── svi.py
+│   ├── visualization/          # Plotting and visualization utilities
+│   │   └── plot_surface.py
+│   └── utils.py                # Helper functions
+│
+├── tests/                      # Unit tests
+│   ├── test_load_data.py
+│   ├── test_sabr.py
+│   └── test_svi.py
+│
+├── results/                    # Output results, model parameters, figures
+│   ├── figures/
+│   │   └── vol_surface_2025-05.png
+│   └── parameters/
+│       └── sabr_params.json
+│
+├── requirements.txt            # Python dependencies
+├── README.md                   # Project overview and instructions
+├── setup.py                   # (Optional) if packaging your code
+└── .gitignore                  # Git ignore file

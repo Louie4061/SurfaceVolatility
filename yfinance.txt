@@ -1,0 +1,17 @@
+🧩 Key Attributes and Methods of the Ticker object
+Here’s what you get from ticker = yf.Ticker("AAPL"):
+
+Attribute/Method	Description
+ticker.info	General company info (name, sector, market cap, etc.)
+ticker.history()	Historical price data (OHLCV)
+ticker.actions	Corporate actions (splits, dividends)
+ticker.dividends	Dividend history
+ticker.splits	Stock split history
+ticker.balance_sheet	Quarterly or annual balance sheets
+ticker.financials	Income statement
+ticker.cashflow	Cash flow statement
+ticker.earnings	Yearly earnings and revenue
+ticker.calendar	Upcoming events (e.g., earnings date)
+ticker.recommendations	Analyst recommendations
+ticker.options	List of available expiration dates for options
+ticker.option_chain(date)	Gets options chain (calls & puts) for a given expiry
