@@ -57,6 +57,8 @@ use the Black-Schole Option Pricing Formula to calculate our value of σ. As the
 σ, we must solve it numerically in one or more of the following ways such as Newtons method, Bisection method
 and other root finding algorithms.
 
+We will begin using newtons method:
+
 ---
 
 # 📈 Black-Scholes Option Pricing Formula
@@ -154,6 +156,7 @@ Each iteration usually brings the estimate closer to the actual root.
 - [Black-Scholes on Wikipedia](https://en.wikipedia.org/wiki/Black–Scholes_model)
 - [Investopedia: Black-Scholes Model](https://www.investopedia.com/terms/b/blackscholes.asp)
 - https://en.wikipedia.org/wiki/Newton%27s_method
+- https://www.youtube.com/watch?v=A5w-dEgIU1M
 
 ---
 
