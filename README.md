@@ -50,5 +50,112 @@ To get started:
 
 ---
 
-## 📁 Suggested File Structure
+## ? So how is Implied Volatility Calculated
+
+Implied Volatility is the value of the volatility σ that satisfies an option pricing model. We will
+use the Black-Schole Option Pricing Formula to calculate our value of σ. As there is not closed formula for
+σ, we must solve it numerically in one or more of the following ways such as Newtons method, Bisection method
+and other root finding algorithms.
+
+---
+
+# 📈 Black-Scholes Option Pricing Formula
+
+The price of a European call option can be given by the **Black-Scholes formula**:
+
+\[
+C = S_0 \cdot N(d_1) - K \cdot e^{-rT} \cdot N(d_2)
+\]
+
+Where:
+
+- \( C \): Call option price  
+- \( S_0 \): Current stock price  
+- \( K \): Strike price  
+- \( T \): Time to expiration (in years)  
+- \( r \): Risk-free interest rate  
+- \( \sigma \): Volatility of the stock (standard deviation of returns)  
+- \( N(\cdot) \): Cumulative distribution function (CDF) of the standard normal distribution
+
+The intermediate variables are:
+
+\[
+d_1 = \frac{\ln(S_0 / K) + (r + \frac{\sigma^2}{2})T}{\sigma \sqrt{T}}
+\]
+
+\[
+d_2 = d_1 - \sigma \sqrt{T}
+\]
+
+---
+
+## 🧠 Intuition
+
+- The formula assumes **no arbitrage**, **constant interest rate**, and that the stock follows a **log-normal distribution**.
+- It gives a theoretical fair price for a European-style option, which can be compared to actual market prices.
+- The **implied volatility (IV)** can be backed out by solving the equation in reverse.
+
+---
+
+## 📦 Usage
+
+You can use this formula to:
+
+- Compute theoretical option prices.
+- Extract **implied volatility** from market option prices.
+- Visualize how option prices change with volatility, time, strike, etc.
+
+---
+
+# 🧮 Newton's Method
+
+Newton's Method is a powerful technique used to find the **roots of a function**, i.e., the values of \( x \) for which \( f(x) = 0 \).
+
+---
+
+## 🔍 Purpose
+
+The idea is to start with an **initial guess** for the root of a function and then refine that guess using the function's **tangent line**. The root of the tangent line is usually a better approximation of the actual root than the original guess. This process is **iterated** to improve the approximation.
+
+---
+
+## ✏️ Linear Approximation
+
+For a differentiable function \( f(x) \), the **best linear approximation** near a point \( x_n \) is its **tangent line**:
+
+\[
+f(x) \approx f(x_n) + f'(x_n)(x - x_n)
+\]
+
+The **root** of this tangent line (i.e., where it intersects the \( x \)-axis) becomes the next approximation \( x_{n+1} \).
+
+---
+
+## 🔁 Iterative Formula
+
+The update rule for Newton's Method is:
+
+\[
+x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)}
+\]
+
+Each iteration usually brings the estimate closer to the actual root.
+
+---
+
+## 🧠 Convergence
+
+- The method can be **started from any initial guess** \( x_0 \), although starting closer to a true root improves speed and reliability.
+- It **typically converges** if \( f'(x_0) \ne 0 \).
+- If the root has **multiplicity 1** and the function behaves nicely, convergence is at least **quadratic** — meaning the number of correct digits roughly **doubles with each step**.
+
+---
+
+## 🔗 References
+
+- [Black-Scholes on Wikipedia](https://en.wikipedia.org/wiki/Black–Scholes_model)
+- [Investopedia: Black-Scholes Model](https://www.investopedia.com/terms/b/blackscholes.asp)
+- https://en.wikipedia.org/wiki/Newton%27s_method
+
+---
 
