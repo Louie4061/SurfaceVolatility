@@ -63,9 +63,7 @@ and other root finding algorithms.
 
 The price of a European call option can be given by the **Black-Scholes formula**:
 
-\[
-C = S_0 \cdot N(d_1) - K \cdot e^{-rT} \cdot N(d_2)
-\]
+`C = S₀ * N(d₁) - K * exp(-r * T) * N(d₂)`
 
 Where:
 
