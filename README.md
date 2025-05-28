@@ -151,6 +151,9 @@ Each iteration usually brings the estimate closer to the actual root.
 
 ---
 
+## Issues that I ran into when coding for a solution
+- I had issues with getting python methods that rely on newton's method such as fsolve, with this method not converging onto a solution. Things that I attempted to try when I ran into these issues was to verify that my input made sense, my main issue was that I was reading our time value to be in days when it should have been in years.
+
 ## 🔗 References
 
 - [Black-Scholes on Wikipedia](https://en.wikipedia.org/wiki/Black–Scholes_model)
